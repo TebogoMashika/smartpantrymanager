@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textViewPantryTitle"
+        android:layout_width="377dp"
+        android:layout_height="66dp"
+        android:padding="16dp"
+        android:text="My Pantry"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewEmptyPantry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewPantryTitle"
+        android:gravity="center"
+        android:padding="30dp"
+        android:text="Your pantry is empty.\nTap + to add an ingredient."
+        android:visibility="gone"/>
+
+    z
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewPantry"
+        android:layout_width="197dp"
+        android:layout_height="491dp"
+        android:layout_above="@id/fabAddIngredient"
+        android:layout_below="@id/textViewPantryTitle"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="246dp"
+        android:padding="8dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddIngredient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"
+        android:contentDescription="Add Ingredient"
+        app:srcCompat="@android:drawable/ic_input_add"/>
+
+</RelativeLayout>
